@@ -255,9 +255,9 @@ int jeu(int taille, int record, FILE* p) //la fonction qui gere le jeu
 				switch(bouton)
 				{
 					case 'Q': 	if(tour_1.sommet!=0||tour_1.etage[tour_1.sommet]!=0) //si la pile source n'est pas vide
-								{	//si la pile destination respecte les règles
+								{	//si la pile destination respecte les rÃ¨gles
 									if((tour_2.etage[tour_2.sommet]!=0&&tour_1.etage[tour_1.sommet]<tour_2.etage[tour_2.sommet])||tour_2.etage[tour_2.sommet]==0)
-									{	//si la pile destination est vide, ne pas incrémenter l'indice du sommet
+									{	//si la pile destination est vide, ne pas incrÃ©menter l'indice du sommet
 										if(tour_2.etage[tour_2.sommet] != 0)
 											tour_2.sommet++;
 										tour_2.etage[tour_2.sommet] = tour_1.etage[tour_1.sommet];
@@ -362,9 +362,9 @@ int jeu(int taille, int record, FILE* p) //la fonction qui gere le jeu
 				switch(bouton)
 				{
 					case 'Q': 	if(tour_1.sommet!=0||tour_1.etage[tour_1.sommet]!=0) //si la pile source n'est pas vide
-								{	//si la pile destination respecte les règles
+								{	//si la pile destination respecte les rÃ¨gles
 									if((tour_2.etage[tour_2.sommet]!=0&&tour_1.etage[tour_1.sommet]<tour_2.etage[tour_2.sommet])||tour_2.etage[tour_2.sommet]==0)
-									{	//si la pile destination est vide, ne pas incrémenter l'indice du sommet
+									{	//si la pile destination est vide, ne pas incrÃ©menter l'indice du sommet
 										if(tour_2.etage[tour_2.sommet] != 0)
 											tour_2.sommet++;
 										tour_2.etage[tour_2.sommet] = tour_1.etage[tour_1.sommet];
