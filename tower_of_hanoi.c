@@ -32,13 +32,11 @@ void affichage_fin(int mouvements, char nom[])
 	char choix;
 	printf("Felicitations %s, vous avez gagne !\n\nObjectif atteint en %d mouvements.\n\n", nom, mouvements);
 	system("pause");
-	do
-	{
 	system("cls");
 	printf("Que voulez-vous faire ?\n\n\n1.Menu Principal\n\n2.Quitter");
+	do
 	choix = getch();
-	}
-	while (choix!='1'&&choix!='2'&&choix!='3');
+	while (choix!='1'&&choix!='2');
 	switch(choix)
 	{
 		case '1': //retour au main
@@ -255,9 +253,9 @@ int jeu(int taille, int record, FILE* p) //la fonction qui gere le jeu
 				switch(bouton)
 				{
 					case 'Q': 	if(tour_1.sommet!=0||tour_1.etage[tour_1.sommet]!=0) //si la pile source n'est pas vide
-								{	//si la pile destination respecte les rÃ¨gles
+								{	//si la pile destination respecte les règles
 									if((tour_2.etage[tour_2.sommet]!=0&&tour_1.etage[tour_1.sommet]<tour_2.etage[tour_2.sommet])||tour_2.etage[tour_2.sommet]==0)
-									{	//si la pile destination est vide, ne pas incrÃ©menter l'indice du sommet
+									{	//si la pile destination est vide, ne pas incrémenter l'indice du sommet
 										if(tour_2.etage[tour_2.sommet] != 0)
 											tour_2.sommet++;
 										tour_2.etage[tour_2.sommet] = tour_1.etage[tour_1.sommet];
@@ -362,9 +360,9 @@ int jeu(int taille, int record, FILE* p) //la fonction qui gere le jeu
 				switch(bouton)
 				{
 					case 'Q': 	if(tour_1.sommet!=0||tour_1.etage[tour_1.sommet]!=0) //si la pile source n'est pas vide
-								{	//si la pile destination respecte les rÃ¨gles
+								{	//si la pile destination respecte les règles
 									if((tour_2.etage[tour_2.sommet]!=0&&tour_1.etage[tour_1.sommet]<tour_2.etage[tour_2.sommet])||tour_2.etage[tour_2.sommet]==0)
-									{	//si la pile destination est vide, ne pas incrÃ©menter l'indice du sommet
+									{	//si la pile destination est vide, ne pas incrémenter l'indice du sommet
 										if(tour_2.etage[tour_2.sommet] != 0)
 											tour_2.sommet++;
 										tour_2.etage[tour_2.sommet] = tour_1.etage[tour_1.sommet];
